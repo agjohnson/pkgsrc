@@ -1,14 +1,18 @@
 # $NetBSD: Makefile,v 1.10 2012/12/06 08:01:21 apb Exp $
 #
 
-DISTNAME=	salt-0.10.5
+DISTNAME= v0.11.1
+PKGNAME= salt-0.11.1
 CATEGORIES=	sysutils
-MASTER_SITES=	http://cloud.github.com/downloads/saltstack/salt/
+MASTER_SITES= https://github.com/saltstack/salt/archive/
+FETCH_USING= curl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://saltstack.org/
 COMMENT=	Remote execution and configuration management system
 LICENSE=	apache-2.0
+
+WRKSRC= ${WRKDIR}/salt-0.11.1
 
 SUBST_CLASSES+=		fix-paths
 SUBST_STAGE.fix-paths=	post-patch
@@ -27,14 +31,14 @@ PKG_SYSCONFSUBDIR=	salt
 
 EGDIR=		${PREFIX}/share/examples/salt
 INSTALLATION_DIRS+= ${EGDIR}
-CONF_FILES+=	${EGDIR}/master.template ${PKG_SYSCONFDIR}/master
-CONF_FILES+=	${EGDIR}/minion.template ${PKG_SYSCONFDIR}/minion
+CONF_FILES+=	${EGDIR}/master ${PKG_SYSCONFDIR}/master
+CONF_FILES+=	${EGDIR}/minion ${PKG_SYSCONFDIR}/minion
 
 RCD_SCRIPTS+=	salt_master salt_minion
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/conf/master.template ${DESTDIR}${EGDIR}/
-	${INSTALL_DATA} ${WRKSRC}/conf/minion.template ${DESTDIR}${EGDIR}/
+	${INSTALL_DATA} ${WRKSRC}/conf/master ${DESTDIR}${EGDIR}/
+	${INSTALL_DATA} ${WRKSRC}/conf/minion ${DESTDIR}${EGDIR}/
 
 # Dependencies are documented at
 # http://docs.saltstack.org/en/latest/topics/installation/index.html#dependencies
