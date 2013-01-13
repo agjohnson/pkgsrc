@@ -12,6 +12,9 @@ HOMEPAGE=		http://chandlerproject.org/bin/view/Projects/MeTooCrypto
 COMMENT=		Crypto and SSL toolkit for Python
 LICENSE=		m2crypto-license
 
+PYSETUPBUILDTARGET= build_ext
+PYSETUPBUILDARGS= --openssl=/usr/pkg
+
 # constness is very different between openssl versions,
 # it seems, and 0.9.7i is the version which currently is
 # in pkgsrc and against which I fixed m2crypto to compile.
