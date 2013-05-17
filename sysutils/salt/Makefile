@@ -1,8 +1,8 @@
 # $NetBSD: Makefile,v 1.10 2012/12/06 08:01:21 apb Exp $
 #
 
-DISTNAME= v0.11.1
-PKGNAME= salt-0.11.1
+DISTNAME= develop
+PKGNAME= salt-0.15dev
 CATEGORIES=	sysutils
 MASTER_SITES= https://github.com/saltstack/salt/archive/
 FETCH_USING= curl
@@ -12,7 +12,7 @@ HOMEPAGE=	http://saltstack.org/
 COMMENT=	Remote execution and configuration management system
 LICENSE=	apache-2.0
 
-WRKSRC= ${WRKDIR}/salt-0.11.1
+WRKSRC= ${WRKDIR}/salt-develop
 
 SUBST_CLASSES+=		fix-paths
 SUBST_STAGE.fix-paths=	post-patch
