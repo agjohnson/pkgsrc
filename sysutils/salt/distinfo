@@ -1,6 +1,6 @@
 $NetBSD: distinfo,v 1.2 2012/12/06 08:01:21 apb Exp $
 
-SHA1 (v0.14.1.tar.gz) = e1bc4f774da0df6cc18124206ab088d4deb8408c
-RMD160 (v0.14.1.tar.gz) = 2f270ca86f9053052d747971267c82555dd08ef7
-Size (v0.14.1.tar.gz) = 3514892 bytes
+SHA1 (develop.tar.gz) = 9f25326cc9660f8be0ace8728eac7ecbf2b52f3f
+RMD160 (develop.tar.gz) = 31c2995d8d41cd43049b2de4f6fc0293e9c0368f
+Size (develop.tar.gz) = 3591926 bytes
 SHA1 (patch-setup.py) = 2386af61e54f5e77b4defdb54e5193b094e20212
