@@ -4,7 +4,7 @@
 DISTNAME= develop
 PKGNAME= salt-0.15dev
 CATEGORIES=	sysutils
-MASTER_SITES= https://github.com/saltstack/salt/archive/
+MASTER_SITES= https://github.com/agjohnson/salt/archive/
 FETCH_USING= curl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
